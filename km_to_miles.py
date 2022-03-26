@@ -3,15 +3,15 @@ from tkinter import *
 # Create an empty Tkinter window:
 window = Tk()
 
-def km_to_miles():
-    # Get user value from input box and multiply by 1.6 to get miles
-    miles = float(e1_value.get())*1.6
+def miles_to_km():
+    # Get user value from input box and multiply by 1.6 to get km
+    km = float(e1_value.get())*1.6
     # Empty the Text boxes if they had text from the previous use and fill them again
     t1.delete("1.0", END)
-    t1.insert(END, miles)
+    t1.insert(END, km)
 
-# The km_to_miles() function is called when the button is pushed
-b1 = Button(window, text = 'Execute', command = km_to_miles)
+# The miles_to_km() function is called when the button is pushed
+b1 = Button(window, text = 'Execute', command = miles_to_km)
 b1.grid(row = 0, column = 0)
 
 e1_value = StringVar()  # Create a special StringVar object
